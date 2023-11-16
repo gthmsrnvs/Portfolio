@@ -7,10 +7,10 @@
 
 /* Use a simple, modern font */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f4f4f4;
+  background-color: #d7d7d7;
   padding-bottom: 50px; /* Add space for the footer */
 }
 
@@ -19,6 +19,76 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #ededed;
+}
+
+/* Welcome Landing Screen */
+#welcome-landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 1; /* This ensures the content is above the canvas */
+  animation: fadeIn 2s ease-in-out;
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.welcome-content h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.welcome-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.welcome-button:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#welcome-landing::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('path-to-futuristic-background.jpg') no-repeat center center / cover;
+  z-index: -1;
+  opacity: 0.7;
+  animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
 }
 
 /* Header styles */
@@ -89,6 +159,14 @@ nav a:hover {
   overflow: hidden;
   border: 1px solid transparent;
   transition: box-shadow 0.3s ease;
+}
+
+.project-item .project-logo {
+  max-width: 80%;  /* Adjust max-width as needed */
+  max-height: 100px; /* Adjust max-height as needed */
+  display: block;  /* Makes it a block-level element */
+  margin: 0 auto;  /* Centers the logo horizontally */
+  object-fit: contain; /* Keeps the aspect ratio */
 }
 
 /* Video styling inside project items */

@@ -6,37 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gautham Srinivas - UI/UX Designer</title>
   <link rel="stylesheet" href="/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
-  <div id="app">
-    <header>
+  <!-- Welcome Landing Screen -->
+  <section id="welcome-landing">
+    <div class="welcome-content">
+      <!-- <img src="path-to-your-profile-photo.jpg" alt="Gautham Srinivas" class="profile-photo"> -->
       <h1>Gautham Srinivas</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#studio-projects">Studio Projects</a>
-        <a href="#independent-projects">Independent Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-    
+      <p>UI/UX Designer and Front-End Developer.</p>
+      <a href="#about" class="welcome-button">Explore My Work</a>
+    </div>
+  </section>
+
+  <div id="app">
     <section id="about">
       <h2>About Me</h2>
-      <p>I am a UX Designer and Front-End Developer passionate about creating beautiful and functional designs that enhance user experience.</p>
-    </section>
+      <p>Hello! I'm Gautham, a UX Designer and Front-End Developer with a passion for creating intuitive, user-centric designs. My approach combines a deep understanding of the design process with innovative design thinking strategies.</p><br>
+      
+      <p>In my toolkit, I use the power of user personas and UX research methods to unlock detailed insights into user needs and behaviors. This approach ensures that every design decision is informed and empathetic, placing users at the heart of every solution.</p><br>
+      
+      <p>I'm well-versed in applying heuristics to guide design decisions, and my practice with usability testing allows me to iteratively refine complex user experiences driven by the data and needs of the users.</p><br>
     
+      <p>My goal is to create digital experiences that are not only aesthetically pleasing but also highly functional and user-friendly. Let's connect and explore how we can make impactful, user-driven design solutions together.</p><br>
+    </section>
+        
     <section id="studio-projects">
-      <h2>Studio Projects</h2>
+      <h2>UX Case Studies</h2>
       <div class="project-grid">
         <!-- Add your studio projects here -->
         <a href="/heatscape.html" class="project-item">
-          <img src="path-to-heatscape-logo.png" alt="HeatScape Logo" class="project-logo">
-          <h3>HeatScape</h3>
+          <img src="/heatscape.png" alt="HeatScape Logo" class="project-logo">
           <p>Urban heat island mitigation through design.</p>
         </a>
         <a href="/cityguard.html" class="project-item">
-          <img src="path-to-cityguard-logo.png" alt="CityGuard Logo" class="project-logo">
-          <h3>CityGuard</h3>
-          <p>Enhancing urban safety through community-driven design.</p>
+          <img src="/cityguard.png" alt="CityGuard Logo" class="project-logo">
+          <p>Enhancing personal safety through crowdsourcing and community-driven design.</p>
         </a>
         <a href="/dataviz.html" class="project-item">
           <img src="path-to-dataviz-logo.png" alt="Data Visualization Studio Logo" class="project-logo">
@@ -46,19 +51,18 @@
         <a href="/newcolombo.html" class="project-item">
           <img src="path-to-newcolombo-logo.png" alt="New Colombo Plan Scholarship Logo" class="project-logo">
           <h3>New Colombo Plan Scholarship</h3>
-          <p>Conservation and biodiversity fieldwork encapsulated through UX design.</p>
+          <p>Designing 'in the wild' in an informal settlement in Indonesia.</p>
         </a>
       </div>
     </section>
 
     <section id="independent-projects">
-      <h2>Independent Projects</h2>
+      <h2>Start-Up Projects</h2>
       <div class="project-grid">
         <!-- Add your independent projects here -->
         <a href="/foodpile.html" class="project-item">
-          <img src="path-to-foodpile-logo.png" alt="Foodpile Logo" class="project-logo">
-          <h3>Foodpile</h3>
-          <p>Connecting food lovers and cultures in a digital community.</p>
+          <img src="/foodpile.png" alt="Foodpile Logo" class="project-logo">
+          <p>Save time, money and effort by taking stock of your pantry and using AI to minimise spending through bulk buying.</p>
         </a>
         <a href="/digitalart.html" class="project-item">
           <img src="path-to-digitalart-logo.png" alt="Digital Art Logo" class="project-logo">
@@ -80,5 +84,6 @@
   </footer>
   
   <script type="module" src="/main.js"></script>
+  <script src="sketch.js"></script>
 </body>
 </html>
