@@ -10,7 +10,8 @@ export default defineConfig({
         cityguard: 'cityguard.html',
         fieldwork: 'fieldwork.html',
         foodpile: 'foodpile.html',
-        heatscape: 'heatscape.html'
+        heatscape: 'heatscape.html',
+        dataviz: 'dataviz.html'
       }
     }
   }
