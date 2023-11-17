@@ -7,12 +7,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        cityguard: 'cityguard.html',
-        fieldwork: 'fieldwork.html',
-        foodpile: 'foodpile.html',
-        heatscape: 'heatscape.html',
-        dataviz: 'dataviz.html',
-        digitalart: 'digitalart.html' 
       }
     }
   }
