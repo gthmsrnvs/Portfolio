@@ -154,6 +154,7 @@ nav a:hover {
   border-radius: 8px;
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  text-decoration: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -193,7 +194,7 @@ nav a:hover {
   opacity: 1;
 }
 
-/* Contact Section styles */
+/* Contact Section Styles */
 #contact {
   text-align: center;
   margin-bottom: 40px;
@@ -201,7 +202,22 @@ nav a:hover {
 
 #contact h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+}
+
+.contact-icons a {
+  color: #333; /* Icon color */
+  font-size: 2rem; /* Icon size */
+}
+
+.contact-icons a:hover {
+  color: #007bff; /* Icon hover color */
 }
 
 /* Footer styles */
@@ -233,5 +249,8 @@ footer {
   #projects h2,
   #contact h2 {
     font-size: 1.75rem;
+  }
+  .contact-icons a {
+    font-size: 1.5rem; /* Smaller icon size on smaller screens */
   }
 }

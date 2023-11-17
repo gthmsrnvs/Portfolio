@@ -15,26 +15,35 @@ function setup() {
 }
 
 function draw() {
-  // Light trails effect
-  background(0, 20); // Reduce opacity to leave trails
+  background(0, 20); // Light trails effect with reduced opacity
 
   for (let i = 0; i < stars.length; i++) {
     let star = stars[i];
 
-    // Glittering effect: Randomly change brightness
-    let brightness = random(150, 255);
-
-    // Check if the mouse is close to the star for an interactive effect
+    // Check if the mouse is close to the star
     if (dist(mouseX, mouseY, star.x, star.y) < 50) {
       fill(random(100, 255), random(100, 255), random(100, 255));
-      star.size = random(4, 15); // Larger size for closer stars
+      drawStar(star.x, star.y, star.size * 10, star.size, 5); // Larger and colorful stars when mouse is close
     } else {
-      fill(brightness);
-      star.size = random(1, 3); // Regular glittering effect
+      fill(255);
+      drawStar(star.x, star.y, star.size, star.size / 2, 5); // Regular stars
     }
-
-    ellipse(star.x, star.y, star.size);
   }
+}
+
+function drawStar(x, y, radius1, radius2, npoints) {
+  let angle = TWO_PI / npoints;
+  let halfAngle = angle / 2.0;
+  beginShape();
+  for (let a = 0; a < TWO_PI; a += angle) {
+    let sx = x + cos(a) * radius2;
+    let sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a + halfAngle) * radius1;
+    sy = y + sin(a + halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
 }
 
 function windowResized() {
