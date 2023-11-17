@@ -11,7 +11,8 @@ export default defineConfig({
         fieldwork: 'fieldwork.html',
         foodpile: 'foodpile.html',
         heatscape: 'heatscape.html',
-        dataviz: 'dataviz.html'
+        dataviz: 'dataviz.html',
+        digitalart: 'digitalart.html' 
       }
     }
   }
